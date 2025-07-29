@@ -34,7 +34,7 @@ For a detailed description of the methodology and results, please see the accomp
 
 1. **Clone this repository:**
     ```bash
-    git clone https://github.com/ZeinabSoleimani/Process-Mining-in-Psychiatry_1.git
+    git clone https://github.com/ZeinabSoleimani/Process-Mining-in-Psychiatry1.git
     ```
 2. **Set up your Python environment:**  
    Required packages are listed in the notebook headers. We recommend using `conda` or `pip` to install:
