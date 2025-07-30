@@ -50,6 +50,17 @@ SELECT
 FROM mapping;
 --------------------------------------------------------------------- 
 --@blockd 
+CREATE TABLE soleiz01.AD_ancestors AS
+WITH mapping AS (
+  ... -- (same as above)
+)
+SELECT 
+  ancestor_concept_name AS ANCESTOR_CONCEPT_NAME,
+  category,
+  concept_id AS CONCEPT_ID
+FROM mapping;
+--------------------------------------------------------------------- 
+--@blockd 
 CREATE TABLE SOLEIZ01.AD_DESCENDANTs AS( 
     SELECT   
         AL.concept_id as  ANCESTOR_CONCEPT_ID,
