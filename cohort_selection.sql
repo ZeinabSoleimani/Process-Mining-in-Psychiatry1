@@ -1,60 +1,53 @@
 ---------------------------------------------------------------------
 --@block
 -- Create the table
-CREATE TABLE soleiz01.AD_ancestors as (
-    select
-        concept_id,
-        concept_code,
-        concept_name
-    from 
-        CONCEPT
-    where 
-        (concept_id in(
-            '797617',
-            '19010886',
-            '715259',
-            '797617',
-            '715939',
-            '755695',
-            '751412',
-            '714684',
-            '722031',
-            '40234834',
-            '19080226',
-            '715259',
-            '743670',
-            '717607',
-            '43560354',
-            '19084693',
-            '703547',
-            '725131',
-            '44507700',
-            '40234834',
-            '750982',
-            '36878783',
-            '19084693',
-            '778268',
-            '721724',
-            '710062',
-            '738156',
-            '716968',
-            '754270',
-            '705755',
-            '794147',
-            '713109',
-            '703470',
-            '733896',
-            '781705',
-            '766209',
-            '19010652',
-            '757688',
-            '766814',
-            '19124477',
-            '19017241',
-            '1366610',
-            '785649'
-        ) AND vocabulary_id = 'RxNorm' AND domain_id = 'Drug')
+WITH mapping AS (
+  SELECT '797617'    AS concept_id, 'Citalopram' AS ancestor_concept_name, 'SSRI' AS category UNION ALL
+  SELECT '19010886', 'Clopenthixol/zuclopenthixol', 'Augmentation' UNION ALL
+  SELECT '715259',   'duloxetine', 'SNRIs' UNION ALL
+  SELECT '797617',   'Sertraline', 'SSRI' UNION ALL
+  SELECT '715939',   'Escitalopram', 'SSRI' UNION ALL
+  SELECT '755695',   'Fluoxetine', 'SSRI' UNION ALL
+  SELECT '751412',   'Fluvoxamine', 'SSRI' UNION ALL
+  SELECT '714684',   'Nefazodone', 'Atypical Antidepressants' UNION ALL
+  SELECT '722031',   'Paroxetine', 'SSRI' UNION ALL
+  SELECT '743670',   'venlafaxine', 'SNRIs' UNION ALL
+  SELECT '717607',   'desvenlafaxine', 'SNRIs' UNION ALL
+  SELECT '43560354', 'levomilnacipran', 'SNRIs' UNION ALL
+  SELECT '19084693', 'milnacipran', 'SNRIs' UNION ALL
+  SELECT '703547',   'trazodone', 'Atypical Antidepressants' UNION ALL
+  SELECT '725131',   'mirtazapine', 'Atypical Antidepressants' UNION ALL
+  SELECT '44507700', 'vortioxetine', 'Atypical Antidepressants' UNION ALL
+  SELECT '40234834', 'vilazodone', 'Atypical Antidepressants' UNION ALL
+  SELECT '750982',   'bupropion', 'Atypical Antidepressants' UNION ALL
+  SELECT '36878783', 'agomelatine', 'Atypical Antidepressants' UNION ALL
+  SELECT '19084693', 'reboxetine', 'Atypical Antidepressants' UNION ALL
+  SELECT '778268',   'imipramine', 'Tricyclic Antidepressants' UNION ALL
+  SELECT '721724',   'nortriptyline', 'Tricyclic Antidepressants' UNION ALL
+  SELECT '710062',   'amitriptyline', 'Tricyclic Antidepressants' UNION ALL
+  SELECT '738156',   'doxepin', 'Tricyclic Antidepressants' UNION ALL
+  SELECT '716968',   'desipramine', 'Tricyclic Antidepressants' UNION ALL
+  SELECT '754270',   'protriptyline', 'Tricyclic Antidepressants' UNION ALL
+  SELECT '705755',   'trimipramine', 'Tricyclic Antidepressants' UNION ALL
+  SELECT '794147',   'maprotiline', 'Tricyclic Antidepressants' UNION ALL
+  SELECT '713109',   'amoxapine', 'Tricyclic Antidepressants' UNION ALL
+  SELECT '703470',   'tranylcypromine', 'MAOIs' UNION ALL
+  SELECT '733896',   'phenelzine', 'MAOIs' UNION ALL
+  SELECT '781705',   'isocarboxazid', 'MAOIs' UNION ALL
+  SELECT '766209',   'selegiline', 'MAOIs' UNION ALL
+  SELECT '19010652', 'moclobemide', 'MAOIs' UNION ALL
+  SELECT '757688',   'aripiprazole', 'Augmentation' UNION ALL
+  SELECT '766814',   'quetiapine', 'Augmentation' UNION ALL
+  SELECT '19124477', 'lithium', 'Augmentation' UNION ALL
+  SELECT '19017241', 'iloperidone', 'Augmentation' UNION ALL
+  SELECT '1366610',  'esketamine', 'Others' UNION ALL
+  SELECT '785649',   'ketamine', 'Others'
 )
+SELECT 
+  ancestor_concept_name AS ANCESTOR_CONCEPT_NAME,
+  category,
+  concept_id AS CONCEPT_ID
+FROM mapping;
 --------------------------------------------------------------------- 
 --@blockd 
 CREATE TABLE SOLEIZ01.AD_DESCENDANTs AS( 
