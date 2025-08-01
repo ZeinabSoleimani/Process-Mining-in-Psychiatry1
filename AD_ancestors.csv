@@ -1,0 +1,41 @@
+ANCESTOR_CONCEPT_NAME,category,CONCEPT_ID
+Citalopram,SSRI,797617
+Clopenthixol/zuclopenthixol,Augmentation,19010886
+Sertraline,SSRI,797617
+Escitalopram,SSRI,715939
+Fluoxetine,SSRI,755695
+Fluvoxamine,SSRI,751412
+Nefazodone,Atypical Antidepressants,714684
+Paroxetine,SSRI,722031
+duloxetine,SNRIs,715259
+venlafaxine,SNRIs,743670
+desvenlafaxine,SNRIs,717607
+levomilnacipran,SNRIs,43560354
+milnacipran,SNRIs,19084693
+trazodone,Atypical Antidepressants,703547
+mirtazapine,Atypical Antidepressants,725131
+vortioxetine,Atypical Antidepressants,44507700
+vilazodone,Atypical Antidepressants,40234834
+bupropion,Atypical Antidepressants,750982
+agomelatine,Atypical Antidepressants,36878783
+reboxetine,Atypical Antidepressants,19084693
+imipramine,Tricyclic Antidepressants,778268
+nortriptyline,Tricyclic Antidepressants,721724
+amitriptyline,Tricyclic Antidepressants,710062
+doxepin,Tricyclic Antidepressants,738156
+desipramine,Tricyclic Antidepressants,716968
+protriptyline,Tricyclic Antidepressants,754270
+trimipramine,Tricyclic Antidepressants,705755
+maprotiline,Tricyclic Antidepressants,794147
+amoxapine,Tricyclic Antidepressants,713109
+tranylcypromine,MAOIs,703470
+phenelzine,MAOIs,733896
+isocarboxazid,MAOIs,781705
+selegiline,MAOIs,766209
+moclobemide,MAOIs,19010652
+aripiprazole,Augmentation,757688
+quetiapine,Augmentation,766814
+lithium,Augmentation,19124477
+iloperidone,Augmentation,19017241
+esketamine,Others,1366610
+ketamine,Others,785649
